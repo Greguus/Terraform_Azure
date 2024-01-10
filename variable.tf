@@ -24,7 +24,6 @@ variable "vnet_address_space" {
 variable "vnet_name" {
   description = "Name of the VNET"
   default     = "gregsec_dev_vnet"
-  
 }
 
 variable "subnet01_address_space" {
@@ -32,8 +31,32 @@ variable "subnet01_address_space" {
   default     = ["10.10.0.0/26"]
 }
 
+variable "postgresql_subnet_address_space" {
+  description = "Delegated subnet for azure postgresql flexible server"
+  default     = ["10.10.0.192/26"]
+}
 variable "subnet01_name" {
   description = "Name for the subnet01"
-  default = "gregsec_dev_subnet01"
+  default     = "gregsec_dev_subnet01"
+}
+
+variable "postgresql_subnet_name" {
+  description = "Name for the postresql flexible server subnet"
+  default     = "postgresql_subnet"
+}
+
+variable "dns_zone_name" {
+  description = "Name for the private dns zone"
+  default     = "django-postgresql-server.private.postgres.database.azure.com"  
+}
+
+variable "dns_link_name" {
+  description = "Name for the dns virtual network link"
+  default     = "dns_to_vnet_link"
+}
+
+variable "postgresql_for_django_name" {
+  description = "Postgresql database for django app"
+  default     = "django-postgresql-server"
 }
 
