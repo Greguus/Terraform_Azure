@@ -45,9 +45,9 @@ variable "postgresql_subnet_name" {
   default     = "postgresql_subnet"
 }
 
-variable "dns_zone_name" {
+variable "postgresql_server_dns_zone_name" {
   description = "Name for the private dns zone"
-  default     = "django-postgresql-server.private.postgres.database.azure.com"  
+  default     = "gregsec.dev.postgres.database.azure.com"  
 }
 
 variable "dns_link_name" {
